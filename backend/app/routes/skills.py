@@ -6,8 +6,8 @@ router = APIRouter()
 # List of skills to check in resumes
 SKILLS = {
     "Programming Languages": [
-        "python", "javascript", "java", "c++", "c#", "ruby", "php", "swift", "kotlin", "go",
-        "typescript", "rust", "scala", "perl", "r", "matlab"
+        "python", "javascript", "java", "c++", "c#", "ruby", "php", "swift", "kotlin",
+        "typescript", "rust", "scala", "perl", "matlab"
     ],
     "Web Technologies": [
         "html", "css", "react", "angular", "vue", "node.js", "express", "django", "flask",
@@ -45,7 +45,7 @@ async def extract_skills(file: UploadFile = File(...), user_id: str = Form(...))
                     found.add(skill)
         # group skills
         categories = {
-            "Programming Languages": {"python", "java", "c++", "c#", "javascript", "sql", "typescript", "ruby", "go", "kotlin", "php", "matlab", "scala", "perl", "swift"},
+            "Programming Languages": {"python", "java", "c++", "c#", "javascript", "sql", "typescript", "ruby", "kotlin", "php", "matlab", "scala", "perl", "swift"},
             "Frameworks & Libraries": {"react", "angular", "django", "flask", "spring", "vue", "express", "fastapi", "bootstrap", "tailwind", "laravel", "pytorch", "tensorflow", "scikit-learn", "pandas", "numpy"},
             "Tools & Platforms": {"docker", "aws", "git", "kubernetes", "jenkins", "azure", "gcp", "github", "gitlab", "ansible", "terraform", "linux", "nginx", "apache", "tableau", "power bi"},
             "Soft Skills": {"communication", "teamwork", "leadership", "problem solving", "adaptability", "creativity", "critical thinking", "time management", "collaboration", "organization"},
