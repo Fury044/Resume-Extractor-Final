@@ -5,6 +5,9 @@ router = APIRouter()
 
 # List of skills to check in resumes
 SKILLS = {
+    "Soft Skills": [
+        "communication", "written communication", "oral communication", "teamwork", "leadership", "problem solving", "problem-solving", "adaptability", "creativity", "critical thinking", "time management", "collaboration", "organization", "decision making", "conflict resolution", "empathy", "active listening", "attention to detail", "multitasking", "self motivation", "work ethic", "flexibility", "emotional intelligence", "stress management", "negotiation", "persuasion", "public speaking", "coaching", "mentoring", "goal setting", "patience", "open-mindedness", "responsibility", "dependability", "initiative", "team leadership", "customer service", "interpersonal skills", "decision-making", "analytical thinking"
+    ],
     "Programming Languages": [
         "python", "javascript", "java", "c++", "c#", "ruby", "php", "swift", "kotlin",
         "typescript", "rust", "scala", "perl", "matlab"
@@ -45,51 +48,10 @@ async def extract_skills(file: UploadFile = File(...), user_id: str = Form(...))
                     found.add(skill)
         # group skills
         categories = {
+            "Soft Skills": {"communication", "teamwork", "leadership", "problem solving", "adaptability", "creativity", "critical thinking", "time management", "collaboration", "organization"},
             "Programming Languages": {"python", "java", "c++", "c#", "javascript", "sql", "typescript", "ruby", "kotlin", "php", "matlab", "scala", "perl", "swift"},
             "Frameworks & Libraries": {"react", "angular", "django", "flask", "spring", "vue", "express", "fastapi", "bootstrap", "tailwind", "laravel", "pytorch", "tensorflow", "scikit-learn", "pandas", "numpy"},
             "Tools & Platforms": {"docker", "aws", "git", "kubernetes", "jenkins", "azure", "gcp", "github", "gitlab", "ansible", "terraform", "linux", "nginx", "apache", "tableau", "power bi"},
-            "Soft Skills": {
-        "communication",
-        "written communication",
-        "oral communication",
-        "teamwork",
-        "leadership",
-        "problem solving",
-        "problem-solving",
-        "adaptability",
-        "creativity",
-        "critical thinking",
-        "time management",
-        "collaboration",
-        "organization",
-        "decision making",
-        "conflict resolution",
-        "empathy",
-        "active listening",
-        "attention to detail",
-        "multitasking",
-        "self motivation",
-        "work ethic",
-        "flexibility",
-        "emotional intelligence",
-        "stress management",
-        "negotiation",
-        "persuasion",
-        "public speaking",
-        "coaching",
-        "mentoring",
-        "goal setting",
-        "patience",
-        "open-mindedness",
-        "responsibility",
-        "dependability",
-        "initiative",
-        "team leadership",
-        "customer service",
-        "interpersonal skills",
-        "decision-making",
-        "analytical thinking"
-    },
         }
         grouped = {cat: [] for cat in categories}
         grouped["Others"] = []
