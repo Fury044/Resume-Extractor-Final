@@ -118,15 +118,13 @@ export default function Upload() {
               Selected file: {file.name}
             </div>
           )}
-          <form onSubmit={handleSubmit} style={{width: 389, height: 79, left: 163, top: 506, position: 'absolute'}}>
+          <form onSubmit={handleSubmit} style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: 32}}>
             <button
               type="submit"
               disabled={!file || isLoading}
-              style={{width: 389, height: 79, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 20, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed'}}
+              style={{width: '80%', height: 56, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 16, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed', color: 'white', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}
             >
-              <span style={{left: 107, top: 17, position: 'absolute', color: 'white', fontSize: 30, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>
-                {isLoading ? 'Uploading...' : 'Extract files'}
-              </span>
+              {isLoading ? 'Uploading...' : 'Extract files'}
             </button>
           </form>
           {error && (
