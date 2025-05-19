@@ -127,13 +127,14 @@ export default function Upload() {
               {isLoading ? 'Uploading...' : 'Extract files'}
             </button>
           </form>
-          {error && (
-            <div style={{position: 'absolute', left: 45, top: 590, width: 627, color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500}}>
-              {error}
-            </div>
-          )}
         </div>
       </div>
+      {/* Error message just above How it works */}
+      {error && (
+        <div style={{width: 400, margin: '24px auto 0 auto', color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
+          {error}
+        </div>
+      )}
       {/* How it works section */}
       <div id="how-it-works" style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 0 40px 0'}}>
         <div style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 40}}>How it works?</div>
