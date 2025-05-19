@@ -127,11 +127,6 @@ export default function Upload() {
               {isLoading ? 'Uploading...' : 'Extract files'}
             </button>
           </form>
-          {error && (
-            <div style={{position: 'absolute', left: 45, top: 590, width: 627, color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500}}>
-              {error}
-            </div>
-          )}
         </div>
       </div>
       {/* How it works section */}
@@ -173,6 +168,11 @@ export default function Upload() {
           <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
         </div>
       </footer>
+      {error && (
+        <div style={{width: 400, margin: '24px auto 0 auto', color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
+          {error}
+        </div>
+      )}
     </>
   );
 } 
