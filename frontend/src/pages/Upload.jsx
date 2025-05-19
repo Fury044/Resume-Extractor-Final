@@ -117,12 +117,12 @@ export default function Upload() {
             </div>
             <div style={{left: 17, top: 75, position: 'absolute', color: '#9CA3AF', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>PDF files only</div>
           </div>
-          {file && (
-            <div style={{position: 'absolute', left: 60, top: 200, color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500}}>
-              Selected file: {file.name}
-            </div>
-          )}
         </div>
+        {file && (
+          <div style={{margin: '20px 0 0 0', color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
+            Selected file: {file.name}
+          </div>
+        )}
         <form onSubmit={handleSubmit} style={{width: 389, height: 79, left: 163, top: 506, position: 'absolute'}}>
           <button
             type="submit"
