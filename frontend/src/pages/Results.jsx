@@ -34,8 +34,8 @@ export default function Results() {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900" style={{color: 'black', fontSize: 70, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word'}}>Extracted  Skills</h2>
-        <p style={{color: '#6B7280', fontSize: 30, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>
+        <h2 className="text-3xl font-bold text-gray-900" style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word', marginBottom: 12}}>Extracted  Skills</h2>
+        <p style={{color: '#6B7280', fontSize: 26, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word', marginTop: 0, marginBottom: 24}}>
           {skillCount} skill{skillCount === 1 ? '' : 's'} found in your resume
         </p>
       </div>
