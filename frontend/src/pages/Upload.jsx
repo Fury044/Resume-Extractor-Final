@@ -143,9 +143,9 @@ export default function Upload() {
         </div>
       </div>
       {/* How it works section */}
-      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '60px 0 40px 0'}}>
+      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '30px 0 40px 0'}}>
         <div style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 40}}>How it works?</div>
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 32}}>
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 64}}>
           {/* Step 1 */}
           <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
             <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>1</div>
@@ -167,7 +167,7 @@ export default function Upload() {
         </div>
       </div>
       <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
-        <div style={{width: '95%', maxWidth: 1400, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap'}}>
+        <div style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap', padding: '0 32px'}}>
           <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center', flexShrink: 1}}>
             © 2025 Resume Skill Extractor. All rights reserved.
           </span>
