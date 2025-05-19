@@ -142,25 +142,21 @@ export default function Upload() {
           )}
         </div>
       </div>
-      <div style={{width: '100%', height: '100%', position: 'relative'}}>
-        <div style={{width: 1920, height: 171, left: 0, top: 0, position: 'absolute', background: '#F3F4F6'}} />
-        <div style={{left: 300, top: 68, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>© 2025 Resume Skill Extractor. All rights reserved.</div>
-        <div data-property-1="Default" style={{width: 169, height: 36, left: 918, top: 68, position: 'absolute'}}>
-            <div style={{left: 0, top: 0, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Privacy Policy</div>
+      <footer style={{width: '100%', background: '#F3F4F6', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
+        <div style={{width: '90%', maxWidth: 1400, display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 32}}>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>
+            © 2025 Resume Skill Extractor. All rights reserved.
+          </span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Privacy Policy</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Terms of Service</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Contact Us</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Support</span>
         </div>
-        <div data-property-1="Default" style={{width: 201, height: 36, left: 1119, top: 68, position: 'absolute'}}>
-            <div style={{left: 0, top: 0, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Terms of Service</div>
-        </div>
-        <div data-property-1="Default" style={{width: 137, height: 36, left: 1351, top: 68, position: 'absolute'}}>
-            <div style={{left: 0, top: 0, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Contact Us</div>
-        </div>
-        <div data-property-1="Default" style={{width: 101, height: 36, left: 1520, top: 68, position: 'absolute'}}>
-            <div style={{left: 0, top: 0, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Support</div>
-        </div>
-        <div style={{left: 1099, top: 68, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>|</div>
-        <div style={{left: 1332, top: 68, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>|</div>
-        <div style={{left: 1500, top: 68, position: 'absolute', color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>|</div>
-      </div>
+      </footer>
     </>
   );
 } 
