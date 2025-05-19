@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Layout() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div style={{width: '100%', height: '100%', position: 'relative', background: 'linear-gradient(134deg, #91C7E8 0%, #DEE6FA 50%, #C3B2F4 100%)'}}>
       <nav style={{width: '100%', height: '110px', background: '#F3F4F6', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4vw', boxSizing: 'border-box'}}>
         <div style={{color: 'black', fontSize: '2.5rem', fontFamily: 'Poppins', fontWeight: 700, wordWrap: 'break-word', whiteSpace: 'nowrap'}}>
           Resume Extractor
