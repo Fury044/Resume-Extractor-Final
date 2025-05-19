@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
 
 export default function Upload() {
   const [isDragging, setIsDragging] = useState(false);
@@ -31,7 +30,6 @@ export default function Upload() {
   const handleDrop = (e) => {
     e.preventDefault();
     setIsDragging(false);
-    
     const droppedFile = e.dataTransfer.files[0];
     if (droppedFile && droppedFile.type === 'application/pdf') {
       setFile(droppedFile);
@@ -48,14 +46,11 @@ export default function Upload() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!file) return;
-
     setIsLoading(true);
     setError('');
-
     const formData = new FormData();
     formData.append('file', file);
     formData.append('user_id', userId);
-
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/skills/extract-skills`, {
         method: 'POST',
@@ -75,102 +70,65 @@ export default function Upload() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">Upload Your Resume</h2>
-        <p className="mt-2 text-gray-600">Upload your PDF resume to extract skills</p>
-      </div>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            opacity: 0.87,
-            background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)',
-            boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)',
-            borderRadius: 40,
-            border: '2px white solid'
-          }}
+    <div style={{width: '100%', height: '100%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 110px)'}}>
+      <div style={{width: 717, height: 620, left: 0, top: 0, position: 'relative', opacity: 0.87, background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px white solid'}}>
+        <div style={{left: 104, top: 49, position: 'absolute', color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload Your Resume</div>
+        <div style={{left: 62, top: 144, position: 'absolute', color: 'black', fontSize: 30, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Upload your PDF resume to extract skills</div>
+        <div style={{width: 627, height: 261, left: 45, top: 212, position: 'absolute', background: 'white', borderRadius: 20,
+          border: isDragging ? '2px dashed #3B82F6' : 'none',
+          boxShadow: isDragging ? '0 0 0 4px #3B82F633' : undefined,
+          cursor: 'pointer',
+        }}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
+          onClick={() => document.getElementById('file-upload').click()}
         >
-          <ArrowUpTrayIcon className="mx-auto h-12 w-12 text-gray-400" />
-          <div className="mt-4">
-            <label
-              htmlFor="file-upload"
-              className="cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500"
-            >
-              <span>Upload a file</span>
-              <input
-                id="file-upload"
-                name="file-upload"
-                type="file"
-                className="sr-only"
-                accept=".pdf"
-                onChange={handleFileSelect}
-              />
-            </label>
-            <p className="text-gray-500">or drag and drop</p>
-            <p className="text-sm text-gray-500">PDF files only</p>
+          <input
+            id="file-upload"
+            name="file-upload"
+            type="file"
+            className="sr-only"
+            accept=".pdf"
+            onChange={handleFileSelect}
+            style={{display: 'none'}}
+          />
+          {/* Arrow/Upload Icon SVGs from Figma */}
+          <div style={{position: 'absolute', left: 328, top: 60}}>
+            <div style={{width: 60.63, height: 13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
+            <div style={{width: 21.90, height: 26.95, position: 'absolute', left: 16.84, top: 2.19, transform: 'rotate(-90deg)', transformOrigin: 'top left', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
+            <div style={{width: 60.63, height: 35.04, position: 'absolute', left: 0, top: -13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
+          </div>
+          <div style={{width: 140, height: 99, left: 244, top: 120, position: 'absolute'}}>
+            <div style={{width: 140, height: 60, left: 0, top: 0, position: 'absolute'}}>
+              <div style={{left: 0, top: 0, position: 'absolute', color: '#3B82F6', fontSize: 22, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload a file</div>
+              <div style={{left: 1, top: 36, position: 'absolute', color: '#6B7280', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>or drag and drop</div>
+            </div>
+            <div style={{left: 17, top: 75, position: 'absolute', color: '#9CA3AF', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>PDF files only</div>
           </div>
           {file && (
-            <p className="mt-2 text-sm text-gray-600">
+            <div style={{position: 'absolute', left: 60, top: 200, color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500}}>
               Selected file: {file.name}
-            </p>
+            </div>
           )}
         </div>
-
+        <form onSubmit={handleSubmit} style={{width: 389, height: 79, left: 163, top: 506, position: 'absolute'}}>
+          <button
+            type="submit"
+            disabled={!file || isLoading}
+            style={{width: 389, height: 79, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 20, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed'}}
+          >
+            <span style={{left: 107, top: 17, position: 'absolute', color: 'white', fontSize: 30, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>
+              {isLoading ? 'Uploading...' : 'Extract files'}
+            </span>
+          </button>
+        </form>
         {error && (
-          <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-lg text-sm">
+          <div style={{position: 'absolute', left: 45, top: 590, width: 627, color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500}}>
             {error}
           </div>
         )}
-
-        <button
-          type="submit"
-          disabled={!file || isLoading}
-          className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
-            file && !isLoading
-              ? 'bg-blue-600 hover:bg-blue-700'
-              : 'bg-gray-300 cursor-not-allowed'
-          }`}
-        >
-          {isLoading ? (
-            <>
-              <svg
-                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              Uploading...
-            </>
-          ) : (
-            'Extract Skills'
-          )}
-        </button>
-      </form>
-      {isLoading && (
-        <div className="flex justify-center mt-4">
-          <span className="text-blue-600 font-medium">Processing your resume...</span>
-        </div>
-      )}
+      </div>
     </div>
   );
 } 
