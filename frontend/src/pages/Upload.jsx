@@ -97,13 +97,17 @@ export default function Upload() {
           <img 
             src={downico} 
             alt="Upload icon"
+            draggable={false}
             style={{
               position: 'absolute',
               left: '50%',
               top: 60,
               transform: 'translateX(-50%)',
               width: '60px',
-              height: '60px'
+              height: '60px',
+              objectFit: 'contain',
+              aspectRatio: '1/1',
+              userSelect: 'none'
             }}
           />
           <div style={{width: 140, height: 99, left: 244, top: 120, position: 'absolute'}}>
