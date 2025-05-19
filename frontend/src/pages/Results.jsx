@@ -48,13 +48,14 @@ export default function Results() {
         )}
 
         <div className="mt-8 text-center">
-          <button
+          <div
             onClick={handleNewUpload}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700"
-          >
-            <ArrowPathIcon className="h-5 w-5 mr-2" />
-            Upload Another Resume
-          </button>
+            style={{width: 426, height: 96, margin: '0 auto', position: 'relative', cursor: 'pointer', display: 'inline-block'}}>
+            <div style={{width: 426, height: 96, left: 0, top: 0, position: 'absolute', background: '#2563EB', borderRadius: 20}} />
+            <div style={{left: 29, top: 26, position: 'absolute', color: 'white', fontSize: 30, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>
+              Upload another Resume
+            </div>
+          </div>
         </div>
       </div>
     </div>
