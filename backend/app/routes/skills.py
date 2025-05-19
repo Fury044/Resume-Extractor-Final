@@ -11,7 +11,7 @@ SKILLS = {
     ],
     "Web Technologies": [
         "html", "css", "react", "angular", "vue", "node.js", "express", "django", "flask",
-        "fastapi", "spring", "asp.net", "laravel", "bootstrap", "tailwind", "sass", "less"
+        "fastapi", "spring", "asp.net", "laravel", "bootstrap", "tailwind", "sass"
     ],
     "Databases": [
         "sql", "mysql", "postgresql", "mongodb", "redis", "oracle", "sqlite", "cassandra",
