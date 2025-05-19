@@ -143,7 +143,7 @@ export default function Upload() {
         </div>
       </div>
       {/* How it works section */}
-      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 0 40px 0'}}>
+      <div id="how-it-works" style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 0 40px 0'}}>
         <div style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 40}}>How it works?</div>
         <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 64}}>
           {/* Step 1 */}
