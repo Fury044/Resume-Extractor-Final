@@ -93,11 +93,11 @@ export default function Upload() {
             onChange={handleFileSelect}
             style={{display: 'none'}}
           />
-          {/* Arrow/Upload Icon SVGs from Figma */}
-          <div style={{width: '100%', height: '100%', position: 'relative', borderRadius: 5}}>
-            <div style={{width: 60.63, height: 13.14, left: 0, top: 19.71, position: 'absolute', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
-            <div style={{width: 21.90, height: 26.95, left: 16.84, top: 21.90, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: 'top left', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
-            <div style={{width: 60.63, height: 35.04, left: 0, top: 6.57, position: 'absolute', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
+          {/* Upload Shapes from Figma */}
+          <div style={{position: 'absolute', left: 328, top: 60}}>
+            <div style={{width: 60.63, height: 13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
+            <div style={{width: 21.90, height: 26.95, position: 'absolute', left: 16.84, top: 2.19, transform: 'rotate(-90deg)', transformOrigin: 'top left', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
+            <div style={{width: 60.63, height: 35.04, position: 'absolute', left: 0, top: -13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
           </div>
           <div style={{width: 140, height: 99, left: 244, top: 120, position: 'absolute'}}>
             <div style={{width: 140, height: 60, left: 0, top: 0, position: 'absolute'}}>
