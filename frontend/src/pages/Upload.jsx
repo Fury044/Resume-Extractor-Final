@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import downico from '../img/downico.png';
 
 export default function Upload() {
   const [isDragging, setIsDragging] = useState(false);
@@ -94,7 +95,7 @@ export default function Upload() {
             style={{display: 'none'}}
           />
           <img 
-            src="/src/img/downico.png" 
+            src={downico} 
             alt="Upload icon"
             style={{
               position: 'absolute',
