@@ -13,7 +13,7 @@ export default function GroupedSkillTags({ groupedSkills }) {
               {skills.map((skill, idx) => (
                 <span
                   key={idx}
-                  className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2"
+                  style={{width: '100%', height: '100%', background: 'linear-gradient(90deg, #CDC2EB 0%, #82A2E9 100%)', borderRadius: 40, display: 'inline-block', padding: '8px 18px', color: '#22223B', fontSize: '1rem', fontWeight: 500, marginRight: 8, marginBottom: 8}}
                 >
                   {skill}
                 </span>
