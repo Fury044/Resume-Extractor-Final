@@ -9,9 +9,7 @@ export default function Layout() {
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <Link to="/" className="text-xl font-bold text-gray-900">
-                  Resume Skills
-                </Link>
+                <div style={{color: 'black', fontSize: 50, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word'}}>Resume Extractor</div>
               </div>
             </div>
           </div>
