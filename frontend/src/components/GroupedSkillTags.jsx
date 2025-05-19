@@ -8,7 +8,7 @@ export default function GroupedSkillTags({ groupedSkills }) {
       {Object.entries(groupedSkills).map(([category, skills]) =>
         skills && skills.length > 0 ? (
           <div key={category} className="mb-6">
-            <h3 className="font-bold text-lg mb-2 text-gray-800">{category}</h3>
+            <h3 style={{color: 'black', fontSize: 40, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word', marginBottom: 8}}>{category}</h3>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, idx) => (
                 <span
