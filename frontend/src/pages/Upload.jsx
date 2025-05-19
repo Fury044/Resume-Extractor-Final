@@ -80,6 +80,7 @@ export default function Upload() {
             border: isDragging ? '1.6px dashed #3B82F6' : 'none',
             boxShadow: isDragging ? '0 0 0 3.2px #3B82F633' : undefined,
             cursor: 'pointer',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8
           }}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
@@ -100,22 +101,17 @@ export default function Upload() {
               alt="Upload icon"
               draggable={false}
               style={{
-                position: 'absolute',
-                left: '50%',
-                top: 48,
-                transform: 'translateX(-50%)',
                 width: '48px',
                 height: '48px',
                 objectFit: 'contain',
                 aspectRatio: '1/1',
-                userSelect: 'none'
+                userSelect: 'none',
+                marginBottom: 8
               }}
             />
-            <div style={{width: 112, height: 79, left: 196, top: 96, position: 'absolute'}}>
-              <div style={{left: 0, top: 0, position: 'absolute', color: '#3B82F6', fontSize: 18, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload a file</div>
-              <div style={{left: 1, top: 29, position: 'absolute', color: '#6B7280', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>or drag and drop</div>
-            </div>
-            <div style={{left: 14, top: 167, position: 'absolute', color: '#9CA3AF', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>PDF files only</div>
+            <div style={{color: '#3B82F6', fontSize: 18, fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>Upload a file</div>
+            <div style={{color: '#6B7280', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>or drag and drop</div>
+            <div style={{color: '#9CA3AF', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600'}}>PDF files only</div>
           </div>
           {file && (
             <div style={{margin: '20px 0 0 0', color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
