@@ -113,23 +113,25 @@ export default function Upload() {
             <div style={{color: '#6B7280', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>or drag and drop</div>
             <div style={{color: '#9CA3AF', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600'}}>PDF files only</div>
           </div>
-          {/* Selected file name just above the button */}
-          <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 16}}>
-            {file && (
-              <div style={{color: '#2563EB', fontSize: 16, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center', marginBottom: 8}}>
-                Selected file: {file.name}
-              </div>
-            )}
-            <form onSubmit={handleSubmit} style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: 0}}>
-              <button
-                type="submit"
-                disabled={!file || isLoading}
-                style={{width: '80%', height: 56, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 16, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed', color: 'white', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}
-              >
-                {isLoading ? 'Uploading...' : 'Extract files'}
-              </button>
-            </form>
-          </div>
+          {file && (
+            <div style={{margin: '20px 0 0 0', color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
+              Selected file: {file.name}
+            </div>
+          )}
+          <form onSubmit={handleSubmit} style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: 'auto'}}>
+            <button
+              type="submit"
+              disabled={!file || isLoading}
+              style={{width: '80%', height: 56, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 16, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed', color: 'white', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}
+            >
+              {isLoading ? 'Uploading...' : 'Extract files'}
+            </button>
+          </form>
+          {error && (
+            <div style={{position: 'absolute', left: 45, top: 590, width: 627, color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500}}>
+              {error}
+            </div>
+          )}
         </div>
       </div>
       {/* How it works section */}
@@ -171,11 +173,6 @@ export default function Upload() {
           <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
         </div>
       </footer>
-      {error && (
-        <div style={{width: 400, margin: '24px auto 0 auto', color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
-          {error}
-        </div>
-      )}
     </>
   );
 } 
