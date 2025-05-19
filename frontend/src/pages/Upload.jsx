@@ -142,19 +142,19 @@ export default function Upload() {
           )}
         </div>
       </div>
-      <footer style={{width: '100%', background: '#F3F4F6', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
-        <div style={{width: '90%', maxWidth: 1400, display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 32}}>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>
+      <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
+        <div style={{width: '95%', maxWidth: 1400, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap'}}>
+          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center', flexShrink: 1}}>
             © 2025 Resume Skill Extractor. All rights reserved.
           </span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Privacy Policy</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Terms of Service</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Contact Us</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer'}}>Support</span>
+          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Privacy Policy</span>
+          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Terms of Service</span>
+          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Contact Us</span>
+          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
+          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Support</span>
         </div>
       </footer>
     </>
