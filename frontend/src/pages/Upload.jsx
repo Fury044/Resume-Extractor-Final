@@ -72,11 +72,11 @@ export default function Upload() {
 
   return (
     <>
-      <div style={{width: '100%', height: '100%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 110px)', marginTop: '30px'}}>
-        <div style={{width: 717, height: 620, left: 0, top: 0, position: 'relative', opacity: 0.87, background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px white solid'}}>
-          <div style={{left: 104, top: 49, position: 'absolute', color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload Your Resume</div>
-          <div style={{left: 62, top: 144, position: 'absolute', color: 'black', fontSize: 30, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Upload your PDF resume to extract skills</div>
-          <div style={{width: 627, height: 261, left: 45, top: 212, position: 'absolute', background: 'white', borderRadius: 20,
+      <div style={{width: '100%', height: '100%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 110px)', marginTop: '0px'}}>
+        <div style={{width: 500, height: 480, left: 0, top: 0, position: 'relative', opacity: 0.87, background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '2px white solid'}}>
+          <div style={{left: 40, top: 30, position: 'absolute', color: 'black', fontSize: 32, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload Your Resume</div>
+          <div style={{left: 30, top: 90, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Upload your PDF resume to extract skills</div>
+          <div style={{width: 420, height: 180, left: 40, top: 140, position: 'absolute', background: 'white', borderRadius: 20,
             border: isDragging ? '2px dashed #3B82F6' : 'none',
             boxShadow: isDragging ? '0 0 0 4px #3B82F633' : undefined,
             cursor: 'pointer',
@@ -102,22 +102,20 @@ export default function Upload() {
               style={{
                 position: 'absolute',
                 left: '50%',
-                top: 60,
+                top: 30,
                 transform: 'translateX(-50%)',
-                width: '60px',
-                height: '60px',
+                width: '40px',
+                height: '40px',
                 objectFit: 'contain',
                 aspectRatio: '1/1',
                 userSelect: 'none'
               }}
             />
-            <div style={{width: 140, height: 99, left: 244, top: 120, position: 'absolute'}}>
-              <div style={{width: 140, height: 60, left: 0, top: 0, position: 'absolute'}}>
-                <div style={{left: 0, top: 0, position: 'absolute', color: '#3B82F6', fontSize: 22, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload a file</div>
-                <div style={{left: 1, top: 36, position: 'absolute', color: '#6B7280', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>or drag and drop</div>
-              </div>
-              <div style={{left: 17, top: 75, position: 'absolute', color: '#9CA3AF', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>PDF files only</div>
+            <div style={{width: 120, height: 60, left: 150, top: 80, position: 'absolute'}}>
+              <div style={{left: 0, top: 0, position: 'absolute', color: '#3B82F6', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload a file</div>
+              <div style={{left: 1, top: 24, position: 'absolute', color: '#6B7280', fontSize: 12, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>or drag and drop</div>
             </div>
+            <div style={{left: 30, top: 140, position: 'absolute', color: '#9CA3AF', fontSize: 12, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>PDF files only</div>
           </div>
           {file && (
             <div style={{margin: '20px 0 0 0', color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
