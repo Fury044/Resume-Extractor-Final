@@ -10,9 +10,9 @@ export default function Layout() {
         </div>
         <div style={{display: 'flex', gap: '2.5vw', alignItems: 'center'}}>
           <Link to="/" style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, textDecoration: 'none', whiteSpace: 'nowrap'}}>Home</Link>
-          <div style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap'}}>How It Works</div>
-          <div style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap'}}>Support</div>
-          <div style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap'}}>Contact</div>
+          <a href="#how-it-works" style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none'}}>How It Works</a>
+          <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none'}}>Support</a>
+          <a href="mailto:divyanshusharma3darts@email.com" style={{color: '#6B7280', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none'}}>Contact</a>
         </div>
       </nav>
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
