@@ -94,7 +94,7 @@ export default function Upload() {
             style={{display: 'none'}}
           />
           {/* Upload Shapes from Figma */}
-          <div style={{position: 'absolute', left: 328, top: 60}}>
+          <div style={{position: 'absolute', left: '50%', top: 60, transform: 'translateX(-50%)'}}>
             <div style={{width: 60.63, height: 13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
             <div style={{width: 21.90, height: 26.95, position: 'absolute', left: 16.84, top: 2.19, transform: 'rotate(-90deg)', transformOrigin: 'top left', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
             <div style={{width: 60.63, height: 35.04, position: 'absolute', left: 0, top: -13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
