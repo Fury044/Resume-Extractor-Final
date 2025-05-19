@@ -40,7 +40,7 @@ export default function Results() {
         </p>
       </div>
 
-      <div className="bg-white shadow rounded-lg p-6">
+      <div className="bg-white shadow rounded-lg p-6" style={{width: '100%', height: '100%', opacity: 0.70, background: 'linear-gradient(90deg, white 0%, #DCDCDC 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '1px white solid'}}>
         {skills.length > 0 ? (
           <GroupedSkillTags groupedSkills={groupedSkills} />
         ) : (
