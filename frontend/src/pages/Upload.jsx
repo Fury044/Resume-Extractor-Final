@@ -83,9 +83,15 @@ export default function Upload() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div
-          className={`border-2 border-dashed rounded-lg p-12 text-center ${
-            isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300'
-          }`}
+          style={{
+            width: '100%',
+            height: '100%',
+            opacity: 0.87,
+            background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)',
+            boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)',
+            borderRadius: 40,
+            border: '2px white solid'
+          }}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
