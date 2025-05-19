@@ -142,6 +142,30 @@ export default function Upload() {
           )}
         </div>
       </div>
+      {/* How it works section */}
+      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '60px 0 40px 0'}}>
+        <div style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 40}}>How it works?</div>
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 32}}>
+          {/* Step 1 */}
+          <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
+            <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>1</div>
+            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Upload</div>
+            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Upload your PDF resume.</div>
+          </div>
+          {/* Step 2 */}
+          <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
+            <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>2</div>
+            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Extract</div>
+            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Click "Extract Skills" to analyze it.</div>
+          </div>
+          {/* Step 3 */}
+          <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
+            <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>3</div>
+            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>View skills</div>
+            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>View and use your extracted skills.</div>
+          </div>
+        </div>
+      </div>
       <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
         <div style={{width: '95%', maxWidth: 1400, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap'}}>
           <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center', flexShrink: 1}}>
