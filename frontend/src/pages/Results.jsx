@@ -70,9 +70,9 @@ export default function Results() {
           <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
           <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Terms of Service</span>
           <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Contact Us</span>
+          <a href="mailto:divyanshusharma3darts@email.com" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Contact Us</a>
           <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Support</span>
+          <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
         </div>
       </footer>
     </>
