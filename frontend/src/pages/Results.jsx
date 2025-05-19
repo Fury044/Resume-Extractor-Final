@@ -51,9 +51,9 @@ export default function Results() {
           <div className="mt-8 text-center">
             <div
               onClick={handleNewUpload}
-              style={{width: 260, height: 56, margin: '0 auto', position: 'relative', cursor: 'pointer', display: 'inline-block'}}>
-              <div style={{width: 260, height: 56, left: 0, top: 0, position: 'absolute', background: '#2563EB', borderRadius: 16}} />
-              <div style={{left: 20, top: 14, position: 'absolute', color: 'white', fontSize: 20, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>
+              style={{width: 300, height: 56, margin: '0 auto', position: 'relative', cursor: 'pointer', display: 'inline-block'}}>
+              <div style={{width: 300, height: 56, left: 0, top: 0, position: 'absolute', background: '#2563EB', borderRadius: 16}} />
+              <div style={{left: 20, top: 14, position: 'absolute', color: 'white', fontSize: 18, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>
                 Upload another Resume
               </div>
             </div>
