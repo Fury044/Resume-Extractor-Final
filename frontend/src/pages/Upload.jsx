@@ -143,7 +143,7 @@ export default function Upload() {
         </div>
       </div>
       {/* How it works section */}
-      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '30px 0 40px 0'}}>
+      <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 0 40px 0'}}>
         <div style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 40}}>How it works?</div>
         <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 64}}>
           {/* Step 1 */}
@@ -166,7 +166,7 @@ export default function Upload() {
           </div>
         </div>
       </div>
-      <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
+      <footer style={{position: 'fixed', left: 0, right: 0, bottom: 0, width: '100vw', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100}}>
         <div style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap', padding: '0 32px'}}>
           <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center', flexShrink: 1}}>
             © 2025 Resume Skill Extractor. All rights reserved.
