@@ -93,12 +93,18 @@ export default function Upload() {
             onChange={handleFileSelect}
             style={{display: 'none'}}
           />
-          {/* Upload Shapes from Figma */}
-          <div style={{position: 'absolute', left: '50%', top: 60, transform: 'translateX(-50%)'}}>
-            <div style={{width: 60.63, height: 13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
-            <div style={{width: 21.90, height: 26.95, position: 'absolute', left: 16.84, top: 2.19, transform: 'rotate(-90deg)', transformOrigin: 'top left', borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
-            <div style={{width: 60.63, height: 35.04, position: 'absolute', left: 0, top: -13.14, borderRadius: 5, outline: '5px #33363F solid', outlineOffset: '-2.50px'}} />
-          </div>
+          <img 
+            src="/src/img/downico.png" 
+            alt="Upload icon"
+            style={{
+              position: 'absolute',
+              left: '50%',
+              top: 60,
+              transform: 'translateX(-50%)',
+              width: '60px',
+              height: '60px'
+            }}
+          />
           <div style={{width: 140, height: 99, left: 244, top: 120, position: 'absolute'}}>
             <div style={{width: 140, height: 60, left: 0, top: 0, position: 'absolute'}}>
               <div style={{left: 0, top: 0, position: 'absolute', color: '#3B82F6', fontSize: 22, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload a file</div>
