@@ -1,263 +1,95 @@
-# GUVI Hackathon FSD Setup
+# Resume Analyzer
 
-A full-stack development boilerplate for GUVI Hackathon participants, featuring a React frontend and Python backend.
+A full-stack web application that extracts, analyzes, and visualizes skills from uploaded resumes (PDFs). Users can upload their resume, view extracted skills grouped by category, and see visual analytics such as top skill categories and important skills.
 
-## 🚀 Tech Stack
+## Features
+- **Resume Upload:** Upload PDF resumes for skill extraction.
+- **Skill Extraction:** Extracts both technical and soft skills using NLP and keyword matching.
+- **Skill Grouping:** Groups skills into categories (e.g., Programming Languages, Tools & Platforms).
+- **Important Skills Detection:** Highlights important/industry-relevant skills found in the resume.
+- **Visual Analytics:**
+  - Pie chart of skill category distribution
+  - Bar chart of important skills by category
+- **Responsive UI:** Modern, mobile-friendly design with Tailwind CSS.
 
-### Frontend
-- React 18+ with Vite
-- Tailwind CSS for styling
-- Netlify for deployment
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS, recharts
+- **Backend:** FastAPI (Python), PyMuPDF (fitz)
 
-### Backend
-- Python 3.x
-- FastAPI
-- Railway for deployment
-
-## 📋 Prerequisites
-
-### Common Requirements
-- Git
-- Make (GNU Make)
-  - Windows: Install via [Chocolatey](https://chocolatey.org/install) or [Scoop](https://scoop.sh/)
-  - macOS: Install via `xcode-select --install` or `brew install make`
-  - Linux: Install via package manager (e.g., `sudo apt-get install make`)
-
-### For Frontend Development
-- Node.js (v22.13.1)
-  - Windows: Download from [Node.js website](https://nodejs.org/)
-  - macOS: Install via `brew install node@22` or use [nvm](https://github.com/nvm-sh/nvm)
-  - Linux: Install via package manager or use [nvm](https://github.com/nvm-sh/nvm)
-- npm or yarn package manager
-
-### For Backend Development
-- Python 3.x
-  - Windows: Download from [Python website](https://www.python.org/downloads/)
-  - macOS: Install via `brew install python@3.11` or download from Python website
-  - Linux: Install via package manager (e.g., `sudo apt-get install python3.11`)
-- pip (Python package manager)
-- Virtual environment (recommended)
-
-## 🛠️ Getting Started
-
-### Important Note
-This is a boilerplate template. Do not push directly to this repository. Instead:
-1. Fork this repository to your GitHub account
-2. Clone your forked repository
-3. Create a new repository for your project
-4. Push your code to your new repository
-
-### Environment Variables
-
-Both frontend and backend use environment variables for configuration. Create the following `.env` files:
-
-#### Backend (.env)
-Create `backend/.env`:
-```env
-APP_NAME=Hackathon FastAPI Backend
-API_VERSION=v1
+## Project Structure
+```
+frontend/         # React frontend
+backend/          # FastAPI backend
 ```
 
-#### Frontend (.env)
-Create `frontend/.env`:
-```env
-VITE_API_URL=http://localhost:3001
-```
+## Getting Started
 
-Note: `.env` files are not tracked in Git for security reasons. Make sure to:
-1. Never commit `.env` files to version control
-2. Keep a `.env.example` file in your repository as a template
-3. Document all required environment variables in your README
+### Prerequisites
+- Node.js (v16+ recommended)
+- Python 3.8+
 
-### Clone Your Fork
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/guvi-research/react-python-fsd-v1.git
-cd react-python-fsd-v1
+git clone <your-repo-url>
+cd Resume
 ```
 
-### Frontend Setup
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-2. Using Make (Recommended):
-```bash
-make run-local
-```
-This command will:
-- Check Node.js version
-- Install dependencies
-- Start the development server
-- Open the browser automatically
-
-If you encounter issues with `make run-local`, you can run the commands manually:
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start the development server
-npm run dev
-```
-
-The frontend will be available at `http://localhost:3000`
-
-### Backend Setup
-1. Navigate to the backend directory:
+### 2. Backend Setup
 ```bash
 cd backend
-```
-
-2. Using Make (Recommended):
-```bash
-make run-local
-```
-This command will:
-- Check Python installation
-- Set up virtual environment
-- Install dependencies
-- Start the FastAPI server
-- Open the API documentation in browser
-
-If you encounter issues with `make run-local`, you can run the commands manually:
-```bash
-# 1. Create virtual environment
-# Windows
 python -m venv venv
-.\venv\Scripts\activate
-
-# macOS/Linux
-python3 -m venv venv
+# Activate the virtual environment:
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
 source venv/bin/activate
 
-# 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Start the server
-uvicorn app.main:app --reload --port 3001
+# Run the FastAPI server
+uvicorn app.routes.skills:router --reload --app-dir app
 ```
+- The backend will be available at `http://localhost:8000` by default.
 
-The backend will be available at `http://localhost:3001`
-API documentation will be available at `http://localhost:3001/docs`
-
-## 🚀 Deployment
-
-### Frontend Deployment (Netlify)
-Using Make (Recommended):
+### 3. Frontend Setup
 ```bash
 cd frontend
-make deploy
+npm install
+
+# Create a .env file with the backend URL
+# .env
+VITE_API_URL=http://localhost:8000
+
+npm run dev
 ```
-This command will:
-- Check Node.js version
-- Install dependencies
-- Build the project
-- Guide you through Netlify deployment
+- The frontend will be available at `http://localhost:5173` by default.
 
-If you encounter issues with `make deploy`, you can deploy manually:
-```bash
-# 1. Build the project
-npm run build
+## Environment Variables
+- **Frontend:**
+  - `VITE_API_URL` — URL of the backend API (e.g., `http://localhost:8000`)
 
-# 2. Deploy to Netlify
-npx netlify deploy --prod --dir=dist
-```
+## Usage
+1. Open the frontend in your browser.
+2. Upload a PDF resume.
+3. View extracted skills, grouped by category.
+4. See analytics: pie chart (skill categories), bar chart (important skills by category).
+5. Download or analyze another resume as needed.
 
-### Backend Deployment (Railway)
-Using Make (Recommended):
-```bash
-cd backend
-make deploy
-```
-This command will:
-- Check Railway CLI installation
-- Verify authentication
-- Guide you through Railway deployment
+## Customizing Important Skills
+- Edit the `IMPORTANT_SKILLS` set in `backend/app/routes/skills.py` to change which skills are considered important for the dashboard.
 
-If you encounter issues with `make deploy`, you can deploy manually:
-```bash
-# 1. Install Railway CLI
-npm install @railway/cli
+## Contributing
+1. Fork the repo and create your branch: `git checkout -b feature/your-feature`
+2. Commit your changes: `git commit -am 'Add new feature'`
+3. Push to the branch: `git push origin feature/your-feature`
+4. Open a pull request
 
-# 2. Login to Railway
-railway login
+## License
+[MIT](LICENSE)
 
-# 3. Initialize project
-railway init
-
-# 4. Deploy
-railway up
-```
-
-## ⚠️ IMPORTANT: Production Environment Setup
-
-> **CRITICAL STEP**: After deploying your backend to Railway, you MUST create a `.env.production` file in your frontend directory with the production backend URL before building and deploying the frontend.
-
-1. Deploy your backend to Railway first
-2. Get your backend URL from Railway (it will look like `https://your-app-name.railway.app`)
-3. Create `frontend/.env.production`:
-```env
-VITE_API_URL=https://your-app-name.railway.app
-```
-4. Only then proceed with frontend deployment
-
-If you skip this step, your frontend will not be able to connect to your backend in production!
-
-
-## 📚 Learning Resources
-
-### Frontend
-- [React Documentation](https://react.dev)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Netlify Documentation](https://docs.netlify.com)
-
-### Backend
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Python Documentation](https://docs.python.org/3/)
-- [Railway Documentation](https://docs.railway.app)
-
-## 🏗️ Project Structure
-
-```
-react-python-fsd-v1/
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── services/
-│   ├── public/
-│   ├── .env
-│   ├── Makefile
-│   └── package.json
-└── backend/
-    ├── app/
-    │   ├── routes/
-    │   ├── models/
-    │   └── main.py
-    ├── .env
-    ├── Makefile
-    └── requirements.txt
-```
-
-## 🔧 Available Make Commands
-
-### Frontend
-- `make run-local` - Start development server
-- `make deploy` - Deploy to Netlify
-
-### Backend
-- `make run-local` - Start development server
-- `make deploy` - Deploy to Railway
-
-## 🤝 Contributing
-
-1. Fork this repository to your GitHub account
-2. Create a new repository for your project
-3. Clone your forked repository
-4. Make your changes
-5. Push to your new repository
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Acknowledgements
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [recharts](https://recharts.org/)
+- [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/)
