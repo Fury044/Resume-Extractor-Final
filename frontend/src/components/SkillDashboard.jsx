@@ -6,7 +6,7 @@ const COLORS = [
   '#a4de6c', '#d0ed57', '#ffc0cb', '#b0e0e6', '#ffb347'
 ];
 
-// Get count of important skills in each category
+// This function get the count of imporant skills
 function getImportantSkillCountsByCategory(groupedSkills, importantSkills) {
   if (!groupedSkills || !importantSkills) return [];
   return Object.entries(groupedSkills)

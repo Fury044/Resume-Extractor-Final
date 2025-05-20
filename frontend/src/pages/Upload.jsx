@@ -73,15 +73,66 @@ export default function Upload() {
   return (
     <div style={{position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden'}}>
       {/* Main content */}
-      <div style={{width: '100%', height: '100%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 250px)', marginTop: '0px'}}>
-        <div style={{width: 573, height: 496, left: 0, top: 0, position: 'relative', opacity: 0.87, background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 32, border: '1.6px white solid', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', padding: '0 0 32px 0'}}>
-          <div style={{left: 83, top: 39, position: 'absolute', color: 'black', fontSize: 38, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload Your Resume</div>
-          <div style={{left: 50, top: 115, position: 'absolute', color: 'black', fontSize: 24, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Upload your PDF resume to extract skills</div>
-          <div style={{width: 502, height: 209, left: 36, top: 170, position: 'absolute', background: 'white', borderRadius: 16,
+      <div style={{
+        width: '100%',
+        height: '100%',
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: 'calc(100vh - 250px)',
+        marginTop: '0px',
+        padding: '20px'
+      }}>
+        <div style={{
+          width: '100%',
+          maxWidth: '573px',
+          minHeight: '496px',
+          position: 'relative',
+          opacity: 0.87,
+          background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)',
+          boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)',
+          borderRadius: 32,
+          border: '1.6px white solid',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          alignItems: 'center',
+          padding: '20px',
+          boxSizing: 'border-box'
+        }}>
+          <div style={{
+            color: 'black',
+            fontSize: 'clamp(24px, 5vw, 38px)',
+            fontFamily: 'Poppins',
+            fontWeight: '600',
+            wordWrap: 'break-word',
+            textAlign: 'center',
+            marginBottom: '20px'
+          }}>Upload Your Resume</div>
+          <div style={{
+            color: 'black',
+            fontSize: 'clamp(16px, 3vw, 24px)',
+            fontFamily: 'Poppins',
+            fontWeight: '400',
+            wordWrap: 'break-word',
+            textAlign: 'center',
+            marginBottom: '20px'
+          }}>Upload your PDF resume to extract skills</div>
+          <div style={{
+            width: '100%',
+            height: '209px',
+            background: 'white',
+            borderRadius: 16,
             border: isDragging ? '1.6px dashed #3B82F6' : 'none',
             boxShadow: isDragging ? '0 0 0 3.2px #3B82F633' : undefined,
             cursor: 'pointer',
-            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 8,
+            marginBottom: '20px'
           }}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
@@ -110,12 +161,20 @@ export default function Upload() {
                 marginBottom: 8
               }}
             />
-            <div style={{color: '#3B82F6', fontSize: 18, fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>Upload a file</div>
-            <div style={{color: '#6B7280', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>or drag and drop</div>
-            <div style={{color: '#9CA3AF', fontSize: 13, fontFamily: 'Poppins', fontWeight: '600'}}>PDF files only</div>
+            <div style={{color: '#3B82F6', fontSize: 'clamp(14px, 2vw, 18px)', fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>Upload a file</div>
+            <div style={{color: '#6B7280', fontSize: 'clamp(12px, 1.5vw, 13px)', fontFamily: 'Poppins', fontWeight: '600', marginBottom: 2}}>or drag and drop</div>
+            <div style={{color: '#9CA3AF', fontSize: 'clamp(12px, 1.5vw, 13px)', fontFamily: 'Poppins', fontWeight: '600'}}>PDF files only</div>
           </div>
           {file && (
-            <div style={{margin: '20px 0 0 0', color: '#2563EB', fontSize: 18, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
+            <div style={{
+              margin: '20px 0',
+              color: '#2563EB',
+              fontSize: 'clamp(14px, 2vw, 18px)',
+              fontFamily: 'Poppins',
+              fontWeight: 500,
+              textAlign: 'center',
+              wordBreak: 'break-word'
+            }}>
               Selected file: {file.name}
             </div>
           )}
@@ -123,40 +182,125 @@ export default function Upload() {
             <button
               type="submit"
               disabled={!file || isLoading}
-              style={{width: '80%', height: 56, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 16, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed', color: 'white', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}
+              style={{
+                width: '100%',
+                maxWidth: '400px',
+                height: 56,
+                background: file && !isLoading ? '#2563EB' : '#9CA3AF',
+                borderRadius: 16,
+                border: 'none',
+                cursor: file && !isLoading ? 'pointer' : 'not-allowed',
+                color: 'white',
+                fontSize: 'clamp(16px, 2.5vw, 24px)',
+                fontFamily: 'Poppins',
+                fontWeight: 600
+              }}
             >
               {isLoading ? 'Uploading...' : 'Analyze Resume'}
             </button>
           </form>
         </div>
       </div>
-      {/* Error message just above How it works */}
+      {/* Error message */}
       {error && (
-        <div style={{width: 400, margin: '24px auto 0 auto', color: '#B91C1C', background: '#FEE2E2', borderRadius: 8, padding: 8, fontSize: 16, fontFamily: 'Poppins', fontWeight: 500, textAlign: 'center'}}>
+        <div style={{
+          width: '90%',
+          maxWidth: '400px',
+          margin: '24px auto 0 auto',
+          color: '#B91C1C',
+          background: '#FEE2E2',
+          borderRadius: 8,
+          padding: 8,
+          fontSize: 'clamp(14px, 1.5vw, 16px)',
+          fontFamily: 'Poppins',
+          fontWeight: 500,
+          textAlign: 'center'
+        }}>
           {error}
         </div>
       )}
       {/* How it works section */}
-      <div id="how-it-works" style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 0 40px 0'}}>
-        <div style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 40}}>How it works?</div>
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 64}}>
+      <div id="how-it-works" style={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: '10px 0 40px 0',
+        padding: '0 20px'
+      }}>
+        <div style={{
+          color: 'black',
+          fontSize: 'clamp(32px, 5vw, 48px)',
+          fontFamily: 'Poppins',
+          fontWeight: 700,
+          marginBottom: 40,
+          textAlign: 'center'
+        }}>How it works?</div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: '20px',
+          width: '100%',
+          maxWidth: '1200px'
+        }}>
           {/* Step 1 */}
-          <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
-            <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>1</div>
-            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Upload</div>
-            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Upload your PDF resume.</div>
+          <div style={{
+            width: '100%',
+            maxWidth: '300px',
+            minHeight: '250px',
+            background: 'white',
+            borderRadius: 20,
+            border: '1px solid #eee',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '24px',
+            boxSizing: 'border-box',
+            boxShadow: '0 2px 12px #0001'
+          }}>
+            <div style={{color: '#2563EB', fontSize: 'clamp(36px, 4vw, 48px)', fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>1</div>
+            <div style={{color: '#0D3A9C', fontSize: 'clamp(24px, 3vw, 32px)', fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Upload</div>
+            <div style={{color: '#9CA3AF', fontSize: 'clamp(14px, 1.5vw, 18px)', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Upload your PDF resume.</div>
           </div>
           {/* Step 2 */}
-          <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
-            <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>2</div>
-            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Analyze</div>
-            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Click "Analyze Resume" to analyze it.</div>
+          <div style={{
+            width: '100%',
+            maxWidth: '300px',
+            minHeight: '250px',
+            background: 'white',
+            borderRadius: 20,
+            border: '1px solid #eee',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '24px',
+            boxSizing: 'border-box',
+            boxShadow: '0 2px 12px #0001'
+          }}>
+            <div style={{color: '#2563EB', fontSize: 'clamp(36px, 4vw, 48px)', fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>2</div>
+            <div style={{color: '#0D3A9C', fontSize: 'clamp(24px, 3vw, 32px)', fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Analyze</div>
+            <div style={{color: '#9CA3AF', fontSize: 'clamp(14px, 1.5vw, 18px)', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Click "Analyze Resume" to analyze it.</div>
           </div>
           {/* Step 3 */}
-          <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
-            <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>3</div>
-            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>View skills</div>
-            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>View and use your extracted skills.</div>
+          <div style={{
+            width: '100%',
+            maxWidth: '300px',
+            minHeight: '250px',
+            background: 'white',
+            borderRadius: 20,
+            border: '1px solid #eee',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '24px',
+            boxSizing: 'border-box',
+            boxShadow: '0 2px 12px #0001'
+          }}>
+            <div style={{color: '#2563EB', fontSize: 'clamp(36px, 4vw, 48px)', fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>3</div>
+            <div style={{color: '#0D3A9C', fontSize: 'clamp(24px, 3vw, 32px)', fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>View skills</div>
+            <div style={{color: '#9CA3AF', fontSize: 'clamp(14px, 1.5vw, 18px)', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>View and use your extracted skills.</div>
           </div>
         </div>
       </div>
