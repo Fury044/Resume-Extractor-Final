@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import GroupedSkillTags from '../components/GroupedSkillTags';
+import SkillDashboard from '../components/SkillDashboard';
+import SkillCategoryPieChart from '../components/SkillCategoryPieChart';
 
 export default function Results() {
   const location = useLocation();
@@ -8,6 +10,7 @@ export default function Results() {
   const result = location.state?.result;
   const skills = result?.skills || [];
   const groupedSkills = result?.grouped_skills || {};
+  const importantSkills = result?.important_skills || [];
   const skillCount = result?.skill_count || 0;
 
   const handleNewUpload = () => {
@@ -39,14 +42,16 @@ export default function Results() {
             {skillCount} skill{skillCount === 1 ? '' : 's'} found in your resume
           </p>
         </div>
-
-        <div className="bg-white shadow rounded-lg p-6" style={{width: '100%', height: '100%', opacity: 0.70, background: 'linear-gradient(90deg, white 0%, #DCDCDC 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '1px white solid'}}>
+        <SkillDashboard groupedSkills={groupedSkills} importantSkills={importantSkills} />
+        <div className="bg-white shadow rounded-lg p-6" style={{width: '100%', height: '100%', opacity: 0.70, background: 'linear-gradient(90deg, white 0%, #DCDCDC 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 40, border: '1px white solid', marginTop: 0}}>
           {skills.length > 0 ? (
             <GroupedSkillTags groupedSkills={groupedSkills} />
           ) : (
             <p className="text-center text-gray-500">No skills found</p>
           )}
-
+          <div style={{margin: '32px 0'}}>
+            <SkillCategoryPieChart groupedSkills={groupedSkills} />
+          </div>
           <div className="mt-8 text-center">
             <div
               onClick={handleNewUpload}

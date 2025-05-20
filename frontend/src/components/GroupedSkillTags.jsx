@@ -11,7 +11,7 @@ export default function GroupedSkillTags({ groupedSkills }) {
               {skills.map((skill, idx) => (
                 <span
                   key={idx}
-                  style={{background: 'linear-gradient(90deg, #CDC2EB 0%, #82A2E9 100%)', borderRadius: 40, display: 'inline-block', padding: '8px 18px', color: '#22223B', fontSize: '1rem', fontWeight: 500, marginRight: 8, marginBottom: 8}}
+                  style={{background: 'linear-gradient(90deg, #CDC2EB 0%, #82A2E9 100%)', borderRadius: 40, display: 'inline-block', padding: '8px 18px', color: '#000000', fontSize: '1rem', fontWeight: 500, marginRight: 8, marginBottom: 8}}
                 >
                   {skill.charAt(0).toUpperCase() + skill.slice(1)}
                 </span>
