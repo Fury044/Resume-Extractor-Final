@@ -30,6 +30,15 @@ SKILLS = {
     ]
 }
 
+# Define a set of important skills
+IMPORTANT_SKILLS = {
+    "python", "javascript", "aws", "react", "sql", "docker", "java", "azure", "machine learning", "leadership", "communication"
+}
+
+def get_important_skills(found_skills):
+    # Return the intersection of found_skills and IMPORTANT_SKILLS, preserving order
+    return [skill for skill in found_skills if skill.lower() in IMPORTANT_SKILLS]
+
 @router.post("/extract-skills")
 async def extract_skills(file: UploadFile = File(...), user_id: str = Form(...)):
     if not file.filename.endswith('.pdf'):
@@ -68,10 +77,13 @@ async def extract_skills(file: UploadFile = File(...), user_id: str = Form(...))
                     break
             if not put:
                 grouped["Others"].append(skill)
+        found_sorted = sorted(list(found))
+        important_skills = get_important_skills(found_sorted)
         result = {
-            "skills": sorted(list(found)),
+            "skills": found_sorted,
             "skill_count": len(found),
             "grouped_skills": grouped,
+            "important_skills": important_skills,
             "userId": user_id
         }
         return result
