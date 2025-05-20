@@ -124,7 +124,7 @@ export default function Upload() {
               disabled={!file || isLoading}
               style={{width: '80%', height: 56, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 16, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed', color: 'white', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}
             >
-              {isLoading ? 'Uploading...' : 'Extract files'}
+              {isLoading ? 'Uploading...' : 'Extract Skills'}
             </button>
           </form>
         </div>
