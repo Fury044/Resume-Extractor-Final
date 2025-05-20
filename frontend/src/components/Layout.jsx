@@ -24,7 +24,7 @@ export default function Layout() {
   }, [navigate, location.pathname]);
 
   return (
-    <div style={{width: '100%', height: '100%', position: 'relative', background: 'linear-gradient(134deg, #91C7E8 0%, #DEE6FA 50%, #C3B2F4 100%)'}}>
+    <div style={{width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', background: 'linear-gradient(134deg, #91C7E8 0%, #DEE6FA 50%, #C3B2F4 100%)'}}>
       <nav style={{width: '100%', height: '70px', background: '#F3F4F6', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 12vw', boxSizing: 'border-box'}}>
         <div style={{color: 'black', fontSize: '1.5rem', fontFamily: 'Poppins', fontWeight: 700, wordWrap: 'break-word', whiteSpace: 'nowrap'}}>
           Resume Extractor
@@ -33,9 +33,10 @@ export default function Layout() {
           <Link to="/" style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, textDecoration: 'none', whiteSpace: 'nowrap'}}>Home</Link>
           <span onClick={handleHowItWorks} style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none', cursor: 'pointer'}}>How It Works</span>
           <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none'}}>Support</a>
+          <a href="mailto:divyanshusharma3darts@email.com" style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none'}}>Contact</a>
         </div>
       </nav>
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <main style={{flex: 1}} className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <Outlet />
       </main>
       <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100, marginTop: 40}}>
