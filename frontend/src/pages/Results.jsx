@@ -18,11 +18,10 @@ export default function Results() {
   if (!result) {
     return (
       <div className="max-w-2xl mx-auto text-center mt-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">No Results</h2>
-        <p className="text-gray-600 mb-8">Please upload a resume first.</p>
-        <button
-          onClick={handleNewUpload}
-          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700"
+        <h2 className="text-2xl font-bold text-gray-900 mb-4" style={{color: 'black', fontSize: 42, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word', marginBottom: 12}}>No Result</h2>
+        <p className="text-gray-600 mb-8" style={{color: '#6B7280', fontSize: 20, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word', marginTop: 0, marginBottom: 24}}>Please upload a resume first.</p>
+        <button onClick={handleNewUpload}
+          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700" style={{position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 18, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}
         >
           <ArrowPathIcon className="h-5 w-5 mr-2" />
           Upload Resume
