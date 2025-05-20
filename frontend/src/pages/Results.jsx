@@ -32,8 +32,8 @@ export default function Results() {
   }
 
   return (
-    <>
-      <div className="max-w-2xl mx-auto">
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div className="flex-1 max-w-2xl mx-auto w-full" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900" style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word', marginBottom: 12}}>Extracted  Skills</h2>
           <p style={{color: '#6B7280', fontSize: 26, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word', marginTop: 0, marginBottom: 24}}>
@@ -75,6 +75,6 @@ export default function Results() {
           <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
         </div>
       </footer>
-    </>
+    </div>
   );
 } 
