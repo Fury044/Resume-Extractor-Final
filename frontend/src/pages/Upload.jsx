@@ -71,7 +71,12 @@ export default function Upload() {
   };
 
   return (
-    <>
+    <div style={{position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden'}}>
+      {/* Decorative background divs */}
+      <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: '#C3B2F4', zIndex: 0}} />
+      <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: '#91C7E8', zIndex: 1, opacity: 0.7}} />
+      <div style={{position: 'absolute', top: '-20%', left: '-20%', width: '140%', height: '60%', background: '#CBC2F6', transform: 'rotate(62deg)', transformOrigin: 'top left', opacity: 0.40, zIndex: 2}} />
+      {/* Main content */}
       <div style={{width: '100%', height: '100%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 250px)', marginTop: '0px'}}>
         <div style={{width: 573, height: 496, left: 0, top: 0, position: 'relative', opacity: 0.87, background: 'linear-gradient(90deg, white 0%, rgba(228, 225, 225, 0.45) 100%)', boxShadow: '0px 4px 40px rgba(0, 0, 0, 0.25)', borderRadius: 32, border: '1.6px white solid', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', padding: '0 0 32px 0'}}>
           <div style={{left: 83, top: 39, position: 'absolute', color: 'black', fontSize: 38, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Upload Your Resume</div>
@@ -174,6 +179,6 @@ export default function Upload() {
           <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
         </div>
       </footer>
-    </>
+    </div>
   );
 } 
