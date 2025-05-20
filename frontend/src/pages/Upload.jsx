@@ -81,11 +81,11 @@ export default function Upload() {
         alt="Background vector 1"
         style={{
           position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
+          width: '553.85px',
+          height: '213px',
+          top: '389px',
+          left: '533.85px',
+          transform: 'rotate(180deg)',
           zIndex: 0
         }}
       />
@@ -94,13 +94,12 @@ export default function Upload() {
         alt="Background vector 2"
         style={{
           position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          zIndex: 1,
-          opacity: 0.7
+          width: '548px',
+          height: '196px',
+          top: '2063px',
+          left: '1934px',
+          transform: 'rotate(180deg)',
+          zIndex: 1
         }}
       />
       <img 
@@ -108,13 +107,11 @@ export default function Upload() {
         alt="Background vector 3"
         style={{
           position: 'absolute',
-          top: '-20%',
-          left: '-20%',
-          width: '140%',
-          height: '60%',
-          objectFit: 'cover',
-          transform: 'rotate(62deg)',
-          transformOrigin: 'top left',
+          width: '322.61px',
+          height: '418px',
+          top: '2018px',
+          left: '261px',
+          transform: 'rotate(-61.69deg)',
           opacity: 0.4,
           zIndex: 2
         }}
