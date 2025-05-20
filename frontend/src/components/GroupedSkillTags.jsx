@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function GroupedSkillTags({ groupedSkills }) {
   if (!groupedSkills || typeof groupedSkills !== "object") return null;
 
