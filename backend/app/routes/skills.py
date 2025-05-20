@@ -34,8 +34,11 @@ SKILLS = {
 async def extract_skills(file: UploadFile = File(...), user_id: str = Form(...)):
     if not file.filename.endswith('.pdf'):
         raise HTTPException(status_code=400, detail="Only PDF files are allowed")
+    contents = await file.read()
+    max_size = 5 * 1024 * 1024  # 5 MB
+    if len(contents) > max_size:
+        raise HTTPException(status_code=413, detail="PDF file size exceeds 5 MB limit")
     try:
-        contents = await file.read()
         pdf = fitz.open(stream=contents, filetype="pdf")
         text = ""
         for page in pdf:
