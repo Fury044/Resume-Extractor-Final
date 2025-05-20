@@ -14,7 +14,7 @@ export default function Results() {
     navigate('/');
   };
 
-  // If user visits directly, show a message
+  // In case someone open /results directly
   if (!result) {
     return (
       <div className="max-w-2xl mx-auto text-center mt-12">
@@ -35,8 +35,8 @@ export default function Results() {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div className="flex-1 max-w-2xl mx-auto w-full" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900" style={{color: 'black', fontSize: 48, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word', marginBottom: 12}}>Extracted  Skills</h2>
-          <p style={{color: '#6B7280', fontSize: 26, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word', marginTop: 0, marginBottom: 24}}>
+          <h2 className="text-3xl font-bold text-gray-900" style={{color: 'black', fontSize: 42, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word', marginBottom: 12}}>Analyzed  Skills</h2>
+          <p style={{color: '#6B7280', fontSize: 20, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word', marginTop: 0, marginBottom: 24}}>
             {skillCount} skill{skillCount === 1 ? '' : 's'} found in your resume
           </p>
         </div>
@@ -60,21 +60,6 @@ export default function Results() {
           </div>
         </div>
       </div>
-      <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100, marginTop: 40}}>
-        <div style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap', padding: '0 32px'}}>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center', flexShrink: 1}}>
-            © 2025 Resume Skill Extractor. All rights reserved.
-          </span>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Privacy Policy</span>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Terms of Service</span>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <a href="mailto:divyanshusharma3darts@email.com" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Contact Us</a>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
-        </div>
-      </footer>
     </div>
   );
 } 

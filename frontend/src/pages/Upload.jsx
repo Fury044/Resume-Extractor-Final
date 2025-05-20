@@ -125,7 +125,7 @@ export default function Upload() {
               disabled={!file || isLoading}
               style={{width: '80%', height: 56, background: file && !isLoading ? '#2563EB' : '#9CA3AF', borderRadius: 16, border: 'none', cursor: file && !isLoading ? 'pointer' : 'not-allowed', color: 'white', fontSize: 24, fontFamily: 'Poppins', fontWeight: 600}}
             >
-              {isLoading ? 'Uploading...' : 'Extract Skills'}
+              {isLoading ? 'Uploading...' : 'Analyze Resume'}
             </button>
           </form>
         </div>
@@ -149,8 +149,8 @@ export default function Upload() {
           {/* Step 2 */}
           <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
             <div style={{color: '#2563EB', fontSize: 48, fontFamily: 'Poppins', fontWeight: 600, marginBottom: 16}}>2</div>
-            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Extract</div>
-            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Click "Extract Skills" to analyze it.</div>
+            <div style={{color: '#0D3A9C', fontSize: 32, fontFamily: 'Poppins', fontWeight: 700, marginBottom: 16}}>Analyze</div>
+            <div style={{color: '#9CA3AF', fontSize: 18, fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center'}}>Click "Analyze Resume" to analyze it.</div>
           </div>
           {/* Step 3 */}
           <div style={{width: 300, minHeight: 300, background: 'white', borderRadius: 20, border: '1px solid #eee', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 32, boxSizing: 'border-box', boxShadow: '0 2px 12px #0001'}}>
@@ -160,21 +160,6 @@ export default function Upload() {
           </div>
         </div>
       </div>
-      <footer style={{width: '100%', background: '#F3F4F6', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100, marginTop: 40}}>
-        <div style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 18, overflowX: 'auto', whiteSpace: 'nowrap', minWidth: 0, flexWrap: 'nowrap', padding: '0 32px'}}>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, textAlign: 'center', flexShrink: 1}}>
-            © 2025 Resume Skill Extractor. All rights reserved.
-          </span>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Privacy Policy</span>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <span style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1}}>Terms of Service</span>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <a href="mailto:divyanshusharma3darts@email.com" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Contact Us</a>
-          <span style={{color: '#6B7280', fontWeight: 600}}>|</span>
-          <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontFamily: 'Poppins', fontWeight: 600, cursor: 'pointer', flexShrink: 1, textDecoration: 'none'}}>Support</a>
-        </div>
-      </footer>
     </div>
   );
 } 
