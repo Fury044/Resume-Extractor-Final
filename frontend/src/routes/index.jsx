@@ -2,8 +2,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import Upload from '../pages/Upload';
 import NotFound from '../pages/NotFound';
 import Layout from '../components/Layout';
-import Home from '../pages/Home';
 import Results from '../pages/Results';
+import Status from '../pages/Status';
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'status',
-        element: <Home />,
+        element: <Status />,
       },
       {
         path: 'results',

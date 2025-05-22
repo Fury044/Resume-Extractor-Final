@@ -50,7 +50,7 @@ export default function Layout() {
           Resume Analyzer
         </div>
         <div className="nav-right-buttons" style={{display: 'flex', gap: '2.5vw', alignItems: 'center'}}>
-          <Link to="/" style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, textDecoration: 'none', whiteSpace: 'nowrap'}}>Home</Link>
+          <Link to="/" style={{textDecoration: 'none', whiteSpace: 'nowrap'}}>Status</Link>
           <span onClick={handleHowItWorks} style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none', cursor: 'pointer'}}>How It Works</span>
           <a href="https://forms.gle/4SELrSr1mTJ85ue48" target="_blank" rel="noopener noreferrer" style={{color: '#6B7280', fontSize: '1.2rem', fontFamily: 'Poppins', fontWeight: 600, whiteSpace: 'nowrap', textDecoration: 'none'}}>Support</a>
         </div>
